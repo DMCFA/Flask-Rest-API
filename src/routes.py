@@ -3,9 +3,14 @@ from src import db, app, ma
 from src.models import Product
 
 @app.route('/')
+@app.route('/home')
 def index():
     return render_template('index.html')
 
+#Add
+@app.route('/add')
+def add():
+    return render_template('add.html')
 
 # Create a Product
 @app.route('/product', methods=['POST'])
